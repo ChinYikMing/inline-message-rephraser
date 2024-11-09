@@ -1,6 +1,9 @@
 # Paragraph Rephrasing Vim Plugin
 A Vim plugin to rephrase the selected paragraph inlinely.
 
+# Demo
+https://github.com/user-attachments/assets/2f2cefee-0723-4d86-b9a2-e086eac1b7a9
+
 ## Feature
 1. Streamline daily task, rephrasing paragraph is my daily task especially writing commit message.
 2. Modern, leveraging the modern LLM deployment framework ([ollama](https://github.com/ollama/ollama))
