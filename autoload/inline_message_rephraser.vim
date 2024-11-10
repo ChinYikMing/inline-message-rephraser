@@ -12,6 +12,10 @@ function! Get_prompt()
   return content
 endfunction
 
+function! Get_line_nr()
+  return line(".")
+endfunction
+
 function! inline_message_rephraser#rephrase()
     " Jump to beginning of sentence(BOS)
     normal! 0
@@ -43,6 +47,11 @@ function! inline_message_rephraser#rephrase()
 
     " Jump to beginning of sentence(BOS)
     normal! 0
+    " Jump to first line of the cursor block if current line is not 1
+    let curr_line_nr = Get_line_nr()
+    if curr_line_nr != 1
+        normal! j
+    endif
     " Into visual line mode, already at recent cursor block so no need {
     normal! V
     " Select the whole cursor block
